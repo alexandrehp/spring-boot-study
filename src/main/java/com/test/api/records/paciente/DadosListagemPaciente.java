@@ -1,4 +1,4 @@
-package com.test.api.records;
+package com.test.api.records.paciente;
 
 import com.test.api.models.Paciente;
 

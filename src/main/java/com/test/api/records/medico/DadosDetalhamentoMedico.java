@@ -1,4 +1,4 @@
-package com.test.api.records;
+package com.test.api.records.medico;
 
 
 import com.test.api.enums.Especialidade;

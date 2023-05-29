@@ -1,4 +1,4 @@
-package med.voll.api.domain.usuario;
+package com.test.api.records.usuario;
 
 public record DadosAutenticacao(String login, String senha) {
 }

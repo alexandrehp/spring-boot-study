@@ -1,5 +1,6 @@
-package com.test.api.records;
+package com.test.api.records.paciente;
 
+import com.test.api.records.endereco.DadosEndereco;
 import jakarta.validation.constraints.NotNull;
 
 public record DadosAtualizacaoPaciente(

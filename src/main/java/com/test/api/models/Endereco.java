@@ -1,6 +1,6 @@
 package com.test.api.models;
 
-import com.test.api.records.DadosEndereco;
+import com.test.api.records.endereco.DadosEndereco;
 import jakarta.persistence.Embeddable;
 import lombok.AllArgsConstructor;
 import lombok.Getter;

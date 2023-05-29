@@ -1,4 +1,4 @@
-package com.test.api.records;
+package com.test.api.records.usuario;
 
 import jakarta.validation.constraints.NotBlank;
 public record DadosCadastroUsuario(

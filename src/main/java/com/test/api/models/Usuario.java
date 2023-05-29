@@ -1,6 +1,6 @@
 package com.test.api.models;
 
-import com.test.api.records.DadosCadastroUsuario;
+import com.test.api.records.usuario.DadosCadastroUsuario;
 import jakarta.persistence.*;
 import lombok.*;
 import org.springframework.security.core.GrantedAuthority;

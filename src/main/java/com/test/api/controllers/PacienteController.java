@@ -1,10 +1,10 @@
 package com.test.api.controllers;
 
 import com.test.api.models.Paciente;
-import com.test.api.records.DadosAtualizacaoPaciente;
-import com.test.api.records.DadosDetalhamentoPaciente;
-import com.test.api.records.DadosListagemPaciente;
-import com.test.api.records.DadosCadastroPaciente;
+import com.test.api.records.paciente.DadosAtualizacaoPaciente;
+import com.test.api.records.paciente.DadosDetalhamentoPaciente;
+import com.test.api.records.paciente.DadosListagemPaciente;
+import com.test.api.records.paciente.DadosCadastroPaciente;
 import com.test.api.repositories.PacienteRepository;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;

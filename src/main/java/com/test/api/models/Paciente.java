@@ -1,7 +1,7 @@
 package com.test.api.models;
 
-import com.test.api.records.DadosAtualizacaoPaciente;
-import com.test.api.records.DadosCadastroPaciente;
+import com.test.api.records.paciente.DadosAtualizacaoPaciente;
+import com.test.api.records.paciente.DadosCadastroPaciente;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;

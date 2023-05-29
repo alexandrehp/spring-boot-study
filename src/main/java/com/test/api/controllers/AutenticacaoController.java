@@ -3,8 +3,8 @@ package com.test.api.controllers;
 import com.test.api.configs.security.DadosTokenJWT;
 import com.test.api.configs.security.TokenService;
 import com.test.api.models.Usuario;
+import com.test.api.records.usuario.DadosAutenticacao;
 import jakarta.validation.Valid;
-import med.voll.api.domain.usuario.DadosAutenticacao;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -26,6 +26,7 @@ public class AutenticacaoController {
 
     @PostMapping
     public ResponseEntity efetuarLogin(@RequestBody @Valid DadosAutenticacao dados) {
+
         var authenticationToken = new UsernamePasswordAuthenticationToken(dados.login(), dados.senha());
         var authentication = manager.authenticate(authenticationToken);
 

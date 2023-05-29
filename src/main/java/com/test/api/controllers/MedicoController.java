@@ -1,10 +1,10 @@
 package com.test.api.controllers;
 
 import com.test.api.models.Medico;
-import com.test.api.records.DadosAtualizacaoMedico;
-import com.test.api.records.DadosCadastroMedico;
-import com.test.api.records.DadosDetalhamentoMedico;
-import com.test.api.records.DadosListagemMedico;
+import com.test.api.records.medico.DadosAtualizacaoMedico;
+import com.test.api.records.medico.DadosCadastroMedico;
+import com.test.api.records.medico.DadosDetalhamentoMedico;
+import com.test.api.records.medico.DadosListagemMedico;
 import com.test.api.repositories.MedicoRepository;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,6 +27,7 @@ public class MedicoController {
     @PostMapping
     @Transactional
     public ResponseEntity cadastrar(@RequestBody @Valid DadosCadastroMedico dados, UriComponentsBuilder uriBuilder) {
+
         var medico = new Medico(dados);
         repository.save(medico);
 

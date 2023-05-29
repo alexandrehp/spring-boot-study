@@ -1,10 +1,8 @@
 package com.test.api.controllers;
 
-import com.test.api.models.Paciente;
 import com.test.api.models.Usuario;
-import com.test.api.records.DadosDetalhamentoPaciente;
-import com.test.api.records.DadosCadastroUsuario;
-import com.test.api.records.DadosDetalhamentoUsuario;
+import com.test.api.records.usuario.DadosCadastroUsuario;
+import com.test.api.records.usuario.DadosDetalhamentoUsuario;
 import com.test.api.services.UsuarioService;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -30,10 +28,14 @@ public class UsuarioController {
     }
 
     @GetMapping("/{id}")
-    @Transactional(readOnly = true)
     public ResponseEntity detalhar(@PathVariable Long id) {
         var usuario = service.findById(id);
         return ResponseEntity.ok(new DadosDetalhamentoUsuario(usuario));
+    }
+
+    @GetMapping
+    public ResponseEntity listar() {
+        return ResponseEntity.ok(service.findAll());
     }
 
 }

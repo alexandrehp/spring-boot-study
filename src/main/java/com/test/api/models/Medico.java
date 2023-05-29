@@ -1,8 +1,8 @@
 package  com.test.api.models;
 
 import com.test.api.enums.Especialidade;
-import com.test.api.records.DadosAtualizacaoMedico;
-import com.test.api.records.DadosCadastroMedico;
+import com.test.api.records.medico.DadosAtualizacaoMedico;
+import com.test.api.records.medico.DadosCadastroMedico;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
@@ -20,7 +20,9 @@ public class Medico {
 
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
     private String nome;
+
     private String email;
 
     private String telefone;
