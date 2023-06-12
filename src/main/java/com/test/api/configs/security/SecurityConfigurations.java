@@ -30,6 +30,7 @@ public class SecurityConfigurations {
                 .requestMatchers(HttpMethod.GET, "/hello").permitAll()
                 .requestMatchers("/usuarios").permitAll()
                 .requestMatchers("/v3/api-docs/**", "/swagger-ui.html", "/swagger-ui/**").permitAll()
+                .requestMatchers(HttpMethod.POST, "/consultas").hasRole("USER")
                 .anyRequest().authenticated()
                 .and().addFilterBefore(securityFilter, UsernamePasswordAuthenticationFilter.class)
                 .build();
